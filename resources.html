@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | Sam Richter and Mike Shonty</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<body>
+
+<!-- nav element styled to center container-->
+<nav id="main-nav-container">
+  <!--Centers the content in the nav bar and styles it-->
+  <div id="main-nav-contents">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hero.html">Tech Heroes</a></li>
+      <li><a class="active" href="resources.html">Implicit Bias</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <!--Class allows content in container to take up 100% of available space while still wrapping but should switch to flexbox-->
+  <div class="content-wrap">
+    <h1>Implicit Bias</h1>
+  </div>
+  <button class="accordion-h3">The Basics</button>
+    <div class=" panel content-wrap">
+      <p>
+        Implicit bias refers to the attitudes or stereotypes that affect our understanding, actions, and decisions in
+        an unconscious manner. These biases are formed based on our upbringing, environment, and culture. Although we
+        may not be aware of these biases within ourselves, it is important to learn about them and acknowledge them so
+        that we can work to create more inclusive and diverse spaces.
+      </p>
+      <p>
+        To help people identify implicit biases, Harvard created Project Implicit. This project has a number of tests
+        that check for various implicit biases. To take the test, head
+        here:<a href="https://implicit.harvard.edu/implicit/takeatest.html" target="_blank">https://implicit.harvard.edu/implicit/takeatest.html</a>
+      </p>
+    </div>
+
+  <!--Class allows for the iframes to reflow-->
+  <button class="accordion-h3">Video Resources</button>
+    <div class=" panel content-wrap">
+      <!--Class allows video players to grow and shrink with available space-->
+      <div class="flex-container-video">
+        <iframe
+                class="iframe-video-youtube"
+                title="YouTube video player"
+                allowfullscreen="allowfullscreen"
+                src="https://www.youtube.com/embed/uYyvbgINZkQ?si=soRTz6wcSjj5vN9">
+        </iframe>
+      </div>
+      <div class="flex-container-video">
+        <iframe
+                class="iframe-video"
+                title="New York Times Video - Embed Player"
+                allowfullscreen="allowfullscreen"
+                src="https://www.nytimes.com/video/players/offsite/index.html?videoId=100000004818663">
+        </iframe>
+      </div>
+    </div>
+
+
+  <button class="accordion-h3">Learn More</button>
+    <div class="panel content-wrap">
+    <p> Here are resources for users to explore their biases</p>
+    <ul>
+      <li><a href="https://app.box.com/s/bpk3v4umfbj8dkakepwvqpqt79y87tyt" target="_blank">Managing Unconscious Bias</a></li>
+      <li><a href="https://www.justice.gov/d9/fieldable-panel-panes/basic-panes/attachments/2021/09/29/understanding_bias_content.pdf" target="_blank">
+        Understanding Bias: A Resource Guide</a></li>
+      <li><a href="https://www.nea.org/resource-library/implicit-bias-microaggressions-and-stereotypes-resources" target="_blank">
+        Implicit Bias, Microaggressions, and Stereotypes Resources</a></li>
+    </ul>
+    </div>
+
+</main>
+<script>
+  var acc = document.getElementsByClassName("accordion-h3");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("h3active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+</body>
+</html>
